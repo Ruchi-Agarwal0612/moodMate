@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mood {
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#moodDisplay {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#happy {
+    background-color: #28a745;
+}
+
+#sad {
+    background-color: #3498db;
+}
+
+#excited {
+    background-color: #ff9800;
+}
+
+#angry {
+    background-color: #e74c3c;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 500px) {
+    #mood {
+        font-size: 28px;
+    }
+
+    #moodDisplay {
+        margin: 15px;
+        padding: 25px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body.dark-mode #mood {
+    color: #ffffff;
+}
+
+body.dark-mode #moodDisplay {
+    background: #2c3e50;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+body.dark-mode #themeToggle {
+    background: #f1c40f;
+    color: #222;
+}
+
+#messageBox {
+    margin-top: 30px;
+    padding: 25px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+#messageTitle {
+    color: #8e44ad;
+    margin-bottom: 12px;
+}
+
+#moodMessage {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+body.dark-mode #messageBox {
+    background: #2c3e50;
+}
+
+body.dark-mode #messageTitle,
+body.dark-mode #moodMessage {
+    color: white;
+}

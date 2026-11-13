@@ -6,7 +6,7 @@ let ang = document.getElementById("angry");
 
 hap.addEventListener("click", function() {
     hap.innerHTML = "😊 Happy";
-    hap.style.backgroundColor = "yellow";
+    hap.style.backgroundColor = "lightpink";
 });
 
 sad.addEventListener("click", function() {
@@ -86,5 +86,18 @@ document.getElementById("angry").addEventListener("click", function() {
 function showMessage(mood) {
     messageTitle.innerText = messages[mood].title;
     moodMessage.innerText = messages[mood].message;
-}
 
+
+    if (mood === "happy") {
+        document.body.style.background = "lightpink";
+    }
+    else if (mood === "sad") {
+        document.body.style.background = "lavender";
+    }
+    else if (mood === "excited") {
+        document.body.style.background = "pink";
+    }
+    else if (mood === "angry") {
+        document.body.style.background = "lightcoral";
+    }
+}

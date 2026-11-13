@@ -6,24 +6,23 @@ let ang = document.getElementById("angry");
 
 hap.addEventListener("click", function() {
     hap.innerHTML = "😊 Happy";
-    hap.style.backgroundColor = "lightpink";
+    document.body.style.backgroundColor = "yellow";
 });
 
 sad.addEventListener("click", function() {
-    sad.innerHTML = "😢 Sad";  
-    sad.style.backgroundColor = "skyblue"; 
+    sad.innerHTML = "😢 Sad";
+    document.body.style.backgroundColor = "skyblue";
 });
 
 exc.addEventListener("click", function() {
-    exc.innerHTML = "😃 Excited";   
-    exc.style.backgroundColor = "Pink";
+    exc.innerHTML = "😃 Excited";
+    document.body.style.backgroundColor = "pink";
 });
 
 ang.addEventListener("click", function() {
-    ang.innerHTML = "😡 Angry";   
-    ang.style.backgroundColor = "lightcoral";
+    ang.innerHTML = "😡 Angry";
+    document.body.style.backgroundColor = "lightcoral";
 });
-
 
 
 const themeToggle = document.getElementById("themeToggle");
@@ -86,18 +85,6 @@ document.getElementById("angry").addEventListener("click", function() {
 function showMessage(mood) {
     messageTitle.innerText = messages[mood].title;
     moodMessage.innerText = messages[mood].message;
-
-
-    if (mood === "happy") {
-        document.body.style.background = "lightpink";
-    }
-    else if (mood === "sad") {
-        document.body.style.background = "lavender";
-    }
-    else if (mood === "excited") {
-        document.body.style.background = "pink";
-    }
-    else if (mood === "angry") {
-        document.body.style.background = "lightcoral";
-    }
+    
 }
+
